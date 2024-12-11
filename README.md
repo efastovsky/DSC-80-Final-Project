@@ -64,13 +64,15 @@ The following steps were taken to clean the dataset:
 ### Cleaned DataFrame
 
 Below is the first five rows of the cleaned DataFrame used for analysis:
-| gameid             | datacompleteness   | league   |   gamelength |   goldat15 |   killsat15 | is_major_league   |
-|:-------------------|:-------------------|:---------|-------------:|-----------:|------------:|:------------------|
-| 10660-10660_game_1 | partial            | DCup     |  4.04235e-08 |        nan |         nan | False             |
-| 10660-10660_game_1 | partial            | DCup     |  4.04235e-08 |        nan |         nan | False             |
-| 10660-10660_game_1 | partial            | DCup     |  4.04235e-08 |        nan |         nan | False             |
-| 10660-10660_game_1 | partial            | DCup     |  4.04235e-08 |        nan |         nan | False             |
-| 10660-10660_game_1 | partial            | DCup     |  4.04235e-08 |        nan |         nan | False             |
+
+| gameid             | datacompleteness   | league   | gamelength   | goldat15   | killsat15   | is_major_league   |
+|:-------------------|:-------------------|:---------|:-------------|:-----------|:------------|:------------------|
+| 10660-10660_game_1 | partial            | DCup     | 4.04e-08     | N/A        | N/A         | False             |
+| 10660-10660_game_1 | partial            | DCup     | 4.04e-08     | N/A        | N/A         | False             |
+| 10660-10660_game_1 | partial            | DCup     | 4.04e-08     | N/A        | N/A         | False             |
+| 10660-10660_game_1 | partial            | DCup     | 4.04e-08     | N/A        | N/A         | False             |
+| 10660-10660_game_1 | partial            | DCup     | 4.04e-08     | N/A        | N/A         | False             |
+
 
 <iframe src="assets/game_length_distribution.html" width=800 height=600 frameBorder=0></iframe>
 
@@ -81,11 +83,10 @@ This plot shows the distribution of game lengths across all matches. The data su
 The scatter plot illustrates the relationship between kills at 15 minutes and gold difference at 15 minutes. Tier-1 leagues are highlighted in red and lower-tier leagues in blue. Major leagues generally show more structured performance patterns, with fewer extreme values.
 
 
-print(pivot_table.to_markdown(index=False))
-| is_major_league   |   gamelength |   Avg Gold at 15 |   Avg Kills at 15 |
-|:------------------|-------------:|-----------------:|------------------:|
-| False             |      31.4611 |          8421.03 |           1.53914 |
-| True              |      32.3992 |          8399.79 |           1.125   |
+| is_major_league   | gamelength   | Avg Gold at 15   | Avg Kills at 15   |
+|:------------------|:-------------|:-----------------|:------------------|
+| False             | 31.46        | 8421.03          | 1.54              |
+| True              | 32.40        | 8399.79          | 1.13              |
 
 Major leagues exhibit slightly longer and more consistent game lengths, with similar early-game gold but has less average kills compared to non-major leagues, which display greater variability in early-game aggression.
 
@@ -278,13 +279,14 @@ The model's performance metrics are as follows:
   A negative \(R^2\) score indicates that the model performs worse than a simple mean-based prediction. This suggests the model struggles to capture meaningful patterns in the data.
 
 #### **Sample Predictions**
-| **Predicted** | **Actual** |
-|---------------|------------|
-| 10,232.94     | 3,634.00   |
-| 8,367.01      | 4,448.00   |
-| 10,804.80     | 6,443.00   |
-| 6,414.96      | 25,495.00  |
-| 8,007.16      | 5,625.00   |
+| **Predicted** | **Actual**   |
+|---------------|--------------|
+| 10,232.94     | 3,634.00     |
+| 8,367.01      | 4,448.00     |
+| 10,804.80     | 6,443.00     |
+| 6,414.96      | 25,495.00    |
+| 8,007.16      | 5,625.00     |
+
 
 The sample predictions show consistent underestimation for high `goldat15` values, highlighting potential issues in the model’s ability to handle extreme cases.
 

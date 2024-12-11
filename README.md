@@ -278,14 +278,12 @@ The model's performance metrics are as follows:
 - **R² Score**: -0.18  
   A negative \(R^2\) score indicates that the model performs worse than a simple mean-based prediction. This suggests the model struggles to capture meaningful patterns in the data.
 
-#### **Sample Predictions**
-| **Predicted** | **Actual**   |
-|---------------|--------------|
-| 10,232.94     | 3,634.00     |
-| 8,367.01      | 4,448.00     |
-| 10,804.80     | 6,443.00     |
-| 6,414.96      | 25,495.00    |
-| 8,007.16      | 5,625.00     |
+Sample Predictions:
+  Predicted: 10232.94, Actual: 3634.00
+  Predicted: 8367.01, Actual: 4448.00
+  Predicted: 10804.80, Actual: 6443.00
+  Predicted: 6414.96, Actual: 25495.00
+  Predicted: 8007.16, Actual: 5625.00
 
 
 The sample predictions show consistent underestimation for high `goldat15` values, highlighting potential issues in the model’s ability to handle extreme cases.
@@ -366,6 +364,12 @@ The model was tuned using a **manual grid search** over the hyperparameter space
 
 These improvements suggest that the additional features and optimized hyperparameters significantly enhanced the model’s ability to predict `goldat15`.
 
+Sample Predictions:
+  Predicted: 4666.18, Actual: 3634.00
+  Predicted: 5099.90, Actual: 4448.00
+  Predicted: 6679.17, Actual: 6443.00
+  Predicted: 20879.15, Actual: 25495.00
+  Predicted: 4271.27, Actual: 5625.00
 ---
 
 # Fairness Analysis

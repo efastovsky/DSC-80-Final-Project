@@ -93,7 +93,7 @@ Major leagues exhibit slightly longer and more consistent game lengths, with sim
 
 
 # Assessment of Missingness
-This data does not have NMAR data as the missing values of the columns are almost always MAR as missingness usually depends on the type of league. If a team is not in a tier 1 league their data is registered as partial and the LPL which is the Chinese tier 1 league does not report their data. So 'goldat15' missingness would be depending on the leauge. 
+This data does not have NMAR data as the missing values of the columns are almost always MAR as missingness usually depends on the type of league. If a team is not in a tier 1 league their data is registered as partial and the LPL which is the Chinese tier 1 league does not report their data. So the outcomes, supporting the notion that killsat25 might be missing for reasons unrelated to performance metrics showing that it is related to the missingness of the LPL. 
 
 <iframe
   src="assets/league_permutation_test.html"
@@ -160,7 +160,7 @@ At a significance level of 0.05, we **fail to reject the null hypothesis**. This
 2. **Choice of Test Statistic**:  
    MSE is an appropriate evaluation metric for regression models. Comparing the difference in MSE quantifies the model’s fairness across groups.
 
-3. **Choice of Significance Level (\(\alpha = 0.05\))**:  
+3. **Choice of Significance Level alpha = 0.05**:  
    This level is a standard threshold for determining statistical significance, suitable for exploratory data analysis.
 
 4. **Permutation Test**:  
@@ -278,7 +278,7 @@ The model's performance metrics are as follows:
 - **R² Score**: -0.18  
   A negative \(R^2\) score indicates that the model performs worse than a simple mean-based prediction. This suggests the model struggles to capture meaningful patterns in the data.
 
-Sample Predictions:
+**Sample Predictions**:
   Predicted: 10232.94, Actual: 3634.00
   Predicted: 8367.01, Actual: 4448.00
   Predicted: 10804.80, Actual: 6443.00
@@ -364,7 +364,7 @@ The model was tuned using a **manual grid search** over the hyperparameter space
 
 These improvements suggest that the additional features and optimized hyperparameters significantly enhanced the model’s ability to predict `goldat15`.
 
-Sample Predictions:
+**Sample Predictions**:
   Predicted: 4666.18, Actual: 3634.00
   Predicted: 5099.90, Actual: 4448.00
   Predicted: 6679.17, Actual: 6443.00

@@ -1,4 +1,5 @@
-# DSC-80-Final-Project - This is the file
+# LOL - Esports Predictions
+# Ethan Fastovsky
 # Intro
 The dataset used in this project comes from Oracle's Elixir, a comprehensive source for professional League of Legends (LoL) esports match data. It contains detailed match statistics spanning multiple years, regions, and competitive leagues. This dataset is invaluable for understanding the dynamics of professional LoL games, with insights into player performance, team strategies, and game outcomes.The central question driving this project is:
 
